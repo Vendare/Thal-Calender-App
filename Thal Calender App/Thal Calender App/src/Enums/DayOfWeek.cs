@@ -1,6 +1,6 @@
 ﻿namespace Thal_Calender_App.Enums
 {
-    enum DayOfWeek
+    public enum DayOfWeek
     {
         Samstag    = 0,
         Sonntag    = 1,
