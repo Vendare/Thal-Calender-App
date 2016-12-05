@@ -1,19 +1,27 @@
-﻿using System;
-using System.ComponentModel;
-using Thal_Calender_App.DataTypes;
+﻿/*
+    Jarloo
+    http://www.jarloo.com
+ 
+    This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 Unported License  
+    http://creativecommons.org/licenses/by-sa/3.0/ 
 
-namespace Thal_Calender_App.src.Views.UserControls
+*/
+
+using System;
+using System.ComponentModel;
+
+namespace Jarloo.Calendar
 {
     public class Day : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
-        private ThalDate date;
+        private DateTime date;
         private string notes;
         private bool enabled;
         private bool isTargetMonth;
         private bool isToday;
-
+        
         public bool IsToday
         {
             get { return isToday; }
@@ -54,7 +62,7 @@ namespace Thal_Calender_App.src.Views.UserControls
             }
         }
 
-        public ThalDate Date
+        public DateTime Date
         {
             get { return date; }
             set

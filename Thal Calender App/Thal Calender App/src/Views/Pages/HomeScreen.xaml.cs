@@ -1,5 +1,4 @@
-﻿using FirstFloor.ModernUI.Windows.Controls;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Thal_Calender_App
+namespace Thal_Calender_App.src.Views.Pages
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for HomeScreen.xaml
     /// </summary>
-    public partial class MainWindow : ModernWindow
+    public partial class HomeScreen : UserControl
     {
-        public MainWindow()
+        public HomeScreen()
         {
             InitializeComponent();
         }

@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Thal_Calender_App.DataTypes
+﻿namespace Thal_Calender_App.DataTypes
 {
     public class ThalDate
     {
@@ -22,16 +20,19 @@ namespace Thal_Calender_App.DataTypes
         public int Month { get; set; }
         public int Year { get; set; }
 
-        public Enums.DayOfWeek getDayOfWeek()
+        public Enums.DayOfWeek DayOfWeek
         {
-            // Das Thal Jahr hat 14 Monate mit jeweils 27 Tagen
-            // dadurch ergibt sich bei der Formel entsprechende offsets
-            // welche die Verschiebungen korrigieren die sich aus der ungeraden 
-            // Anzahl der Tage pro Monat ergibt. Das Jahr ist irrelevant weil wir
-            // keine Schaltjahre haben und das offset sich nach 7 Monaten wiederholt
-            var offset = new int[] { 0, 5, 3, 1, 6, 4, 2, 0, 5, 3, 1, 6, 4, 2 };
+            get
+            {
+                // Das Thal Jahr hat 14 Monate mit jeweils 27 Tagen
+                // dadurch ergibt sich bei der Formel entsprechende offsets
+                // welche die Verschiebungen korrigieren die sich aus der ungeraden 
+                // Anzahl der Tage pro Monat ergibt. Das Jahr ist irrelevant weil wir
+                // keine Schaltjahre haben und das offset sich nach 7 Monaten wiederholt
+                var offset = new int[] { 0, 5, 3, 1, 6, 4, 2, 0, 5, 3, 1, 6, 4, 2 };
 
-            return (Enums.DayOfWeek)((Day + Month + offset[Month - 1]) % 7);
+                return (Enums.DayOfWeek)((Day + Month + offset[Month - 1]) % 7);
+            }     
         }
 
         // Die Methode funktioniert nur wenn wir wenige Tage benutzen
@@ -57,11 +58,11 @@ namespace Thal_Calender_App.DataTypes
             {
                 if(Month == 14)
                 {
-                    return new ThalDate() { Day = tmp - 27, Month = Month + 1, Year = Year };
+                    return new ThalDate() { Day = tmp - 27, Month = 1, Year = Year + 1 };
                 }
                 else
                 {
-                    return new ThalDate() { Day = tmp - 27, Month = 1, Year = Year + 1 };
+                    return new ThalDate() { Day = tmp - 27, Month = Month + 1, Year = Year };                    
                 }
                 
             } else
@@ -70,9 +71,14 @@ namespace Thal_Calender_App.DataTypes
             }
         }
 
+        public string toString()
+        {
+            return Day + "." + Month + "." + Year;
+        }
+
         public int DayOfWeekNumber()
         {
-            var dow = getDayOfWeek();
+            var dow = DayOfWeek;
 
             switch(dow)
             {
