@@ -1,4 +1,4 @@
-﻿namespace CommonDataTypes.Enums
+﻿namespace Thal_Calender_App.src.Enums
 {
     public enum DayOfWeek
     {

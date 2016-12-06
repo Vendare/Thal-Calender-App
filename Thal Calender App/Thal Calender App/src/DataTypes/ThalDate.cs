@@ -1,4 +1,6 @@
-﻿namespace Thal_Calender_App.DataTypes
+﻿using System;
+
+namespace Thal_Calender_App.src.DataTypes
 {
     public class ThalDate
     {
@@ -76,6 +78,12 @@
             return Day + "." + Month + "." + Year;
         }
 
+        public static ThalDate parse(string dateString)
+        {
+            var parts = dateString.Split('.');
+            return new ThalDate() { Day = Convert.ToInt32(parts[0]), Month = Convert.ToInt32(parts[1]), Year = Convert.ToInt32(parts[2]) };
+        }
+
         public int DayOfWeekNumber()
         {
             var dow = DayOfWeek;
@@ -89,7 +97,7 @@
                 case Enums.DayOfWeek.Freitag: return 5;
                 case Enums.DayOfWeek.Samstag: return 6;
                 case Enums.DayOfWeek.Sonntag: return 7;
-                default: return 1;
+                default: return 0;
             }
         }
     }

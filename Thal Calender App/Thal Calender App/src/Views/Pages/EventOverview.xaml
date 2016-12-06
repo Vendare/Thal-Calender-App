@@ -1,0 +1,18 @@
+﻿<UserControl x:Class="Thal_Calender_App.src.Views.Pages.EventOverview"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Thal_Calender_App.src.Views.Pages"
+             xmlns:xceed="http://schemas.xceed.com/wpf/xaml/datagrid"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="600">
+    <Grid>
+        <xceed:DataGridControl >
+            <xceed:DataGridControl.Columns >
+                <xceed:Column FieldName="Datum"  />
+                <xceed:Column FieldName="Event" />
+            </xceed:DataGridControl.Columns>
+        </xceed:DataGridControl>
+    </Grid>
+</UserControl>
