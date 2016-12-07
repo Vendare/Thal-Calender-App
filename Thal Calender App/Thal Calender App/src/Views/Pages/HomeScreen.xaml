@@ -11,6 +11,6 @@
     <Grid Margin="0">
         <cs:ThalDateUpDown Margin="115,10,0,0" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="320" />
         <Label x:Name="label" Content="Aktuelles Datum :" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" Height="30" Width="100"/>
-        <ListBox x:Name="listBox" Margin="10,50,10,10"/>
+        <ListBox x:Name="listBox" Margin="10,50,10,10" Background="#FF333333"/>
     </Grid>
 </UserControl>

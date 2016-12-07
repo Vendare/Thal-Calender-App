@@ -44,7 +44,7 @@ namespace Thal_Calender_App.src.DataTypes
         {
             var tmp = Day + dayCount;
 
-            if (tmp < 0)
+            if (tmp <= 0)
             {
                 if (Month == 1)
                 {
@@ -70,6 +70,46 @@ namespace Thal_Calender_App.src.DataTypes
             } else
             {
                 return new ThalDate() { Day = tmp, Month = Month, Year = Year };
+            }
+        }
+
+        public string MonthName
+        {
+            get
+            {
+                switch (Month)
+                {
+                    case 1:
+                        return "Januar";
+                    case 2:
+                        return "Februar";
+                    case 3:
+                        return "März";
+                    case 4:
+                        return "April";
+                    case 5:
+                        return "Mai";
+                    case 6:
+                        return "Juni";
+                    case 7:
+                        return "Juli";
+                    case 8:
+                        return "Extra Monat";
+                    case 9:
+                        return "August";
+                    case 10:
+                        return "September";
+                    case 11:
+                        return "Oktober";
+                    case 12:
+                        return "November";
+                    case 13:
+                        return "Dezember";
+                    case 14:
+                        return "Extra Monat";
+
+                }
+                return "Unbekannt";
             }
         }
 

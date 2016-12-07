@@ -1,0 +1,28 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Thal_Calender_App.src.Views.Pages"
+             xmlns:UserControls="clr-namespace:Thal_Calender_App.src.Views.UserControls" x:Class="Thal_Calender_App.src.Views.Pages.DataEntryView"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="600">
+    <Grid>
+        <UserControls:ThalDateUpDown HorizontalAlignment="Left" Margin="60,10,0,0" VerticalAlignment="Top" Width="390" Height="30"/>
+        <Label Content="Datum : " HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" Height="30" Width="45"/>
+        <Label Content="Titel : " HorizontalAlignment="Left" Margin="10,50,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" Height="30" Width="45"/>
+        <Label Content="Beschreibung : " HorizontalAlignment="Left" Margin="10,100,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="30" Margin="60,50,0,0" TextWrapping="NoWrap" Text="TextBox" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="390"/>
+        <RichTextBox x:Name="richTextBox" Margin="10,121,10,10">
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text="RichTextBox"/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+        <Button Content="Löschen" HorizontalAlignment="Right" Margin="0,50,10,0" VerticalAlignment="Top" Width="100" Height="30" />
+        <Button Content="Speichern" HorizontalAlignment="Right" Margin="0,10,10,0" VerticalAlignment="Top" Width="100" Height="30" />
+
+
+    </Grid>
+</UserControl>

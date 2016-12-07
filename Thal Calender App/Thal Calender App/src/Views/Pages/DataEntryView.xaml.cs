@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace Thal_Calender_App.src.Views.Pages
 {
     /// <summary>
-    /// Interaction logic for YearViewControl.xaml
+    /// Interaction logic for DataEntryView.xaml
     /// </summary>
-    public partial class YearViewControl : UserControl
+    public partial class DataEntryView : UserControl
     {
-        public YearViewControl()
+        public DataEntryView()
         {
             InitializeComponent();
         }

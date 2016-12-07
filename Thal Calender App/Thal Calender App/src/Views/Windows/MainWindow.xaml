@@ -9,7 +9,8 @@
         <mui:LinkGroup DisplayName="gruppe">
             <mui:LinkGroup.Links>
                 <mui:Link DisplayName="Start" Source="/src/Views/Pages/HomeScreen.xaml" />
-                <mui:Link DisplayName="Monatsübersicht" Source="/src/Views/Pages/MonthViewControl.xaml" />
+                <mui:Link DisplayName="Monatsübersicht" Source="/src/Views/Pages/MonthView.xaml" />
+                <mui:Link DisplayName="Jahresübersicht" Source="/src/Views/Pages/YearView.xaml" />
                 <mui:Link DisplayName="Eventübersicht" Source="/src/Views/Pages/EventOverview.xaml" /> 
             </mui:LinkGroup.Links>
         </mui:LinkGroup>
