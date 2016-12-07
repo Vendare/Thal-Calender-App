@@ -117,7 +117,28 @@
     <Compile Include="src\Config\ConfigManager.cs" />
     <Compile Include="src\Controllers\DataInputController.cs" />
     <Compile Include="src\Controllers\EventOverviewController.cs" />
+    <Compile Include="src\Database\CalendarData.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CalendarData.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="src\Database\CalendarData.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CalendarData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="src\Database\CalendarData.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CalendarData.edmx</DependentUpon>
+    </Compile>
     <Compile Include="src\Database\DatabaseHandler.cs" />
+    <Compile Include="src\Database\Event.cs">
+      <DependentUpon>CalendarData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="src\Database\Log.cs">
+      <DependentUpon>CalendarData.tt</DependentUpon>
+    </Compile>
     <Compile Include="src\DataTypes\Event.cs" />
     <Compile Include="src\DataTypes\ThalDate.cs" />
     <Compile Include="src\Enums\DayOfWeek.cs" />
@@ -183,12 +204,29 @@
     <None Include="data\data.db">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <EntityDeploy Include="src\Database\CalendarData.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>CalendarData.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="src\Database\CalendarData.edmx.diagram">
+      <DependentUpon>CalendarData.edmx</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="resource\Custom-Icon-Design-Pretty-Office-7-Calendar.ico" />
+    <Content Include="src\Database\CalendarData.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>CalendarData.Context.cs</LastGenOutput>
+      <DependentUpon>CalendarData.edmx</DependentUpon>
+    </Content>
+    <Content Include="src\Database\CalendarData.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>CalendarData.cs</LastGenOutput>
+      <DependentUpon>CalendarData.edmx</DependentUpon>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6">

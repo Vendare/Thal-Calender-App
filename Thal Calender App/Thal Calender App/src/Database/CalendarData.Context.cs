@@ -13,10 +13,10 @@ namespace Thal_Calender_App.src.Database
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class dataEntities : DbContext
+    public partial class CalendarDataContainer : DbContext
     {
-        public dataEntities()
-            : base("name=dataEntities")
+        public CalendarDataContainer()
+            : base("name=CalendarDataContainer")
         {
         }
     
@@ -26,5 +26,6 @@ namespace Thal_Calender_App.src.Database
         }
     
         public virtual DbSet<Event> Event { get; set; }
+        public virtual DbSet<Log> Log { get; set; }
     }
 }
